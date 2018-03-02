@@ -156,16 +156,20 @@ public class flamingo extends Actor
     public void outOfWorld(){
         World myWorld = getWorld();
         GameOver gameover = new GameOver();
+        score ascore = new score();
         
         myWorld.addObject(gameover,myWorld.getWidth()/2,(myWorld.getHeight()/2)-100);
+        myWorld.addObject(ascore,myWorld.getWidth()/2,(myWorld.getHeight()/2));
         myWorld.removeObject(this);
         myWorld.addObject(new returnbtn(),500,400);
     }
     public void finish(){
         World myWorld = getWorld();
         Win win = new Win();
+        score ascore = new score();
         
         myWorld.addObject(win,myWorld.getWidth()/2,(myWorld.getHeight()/2)-100);
+        myWorld.addObject(ascore,myWorld.getWidth()/2,(myWorld.getHeight()/2));
         myWorld.addObject(new returnbtn(),500,400);
     }
     public void stopAtEdge()
